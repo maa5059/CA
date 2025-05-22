@@ -39,5 +39,23 @@ namespace V1._0
             txtDueDate.Clear();
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            txtTask.Clear();
+            txtDueDate.Clear();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+            if (listBoxTasks.SelectedIndex != -1)
+            {
+                listBoxTasks.Items.RemoveAt(listBoxTasks.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Please select a task to delete.", "Delete Task", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
